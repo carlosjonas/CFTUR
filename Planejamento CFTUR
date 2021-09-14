@@ -1,0 +1,18 @@
+CFTUR - Levando seus sonhos sempre mais longe
+
+O objetivo é começar um site da CFTUR  e mostrar mais dessa agência de viagens
+
+Header:
+- Container fluid com 3 ou 4 imagens para que mostre 3 imagens 
+- header com a logo e os links em ordem: PACOTES/GALERIA/SOBRE NÓS/CONTATO
+
+Index:
+-PACOTES: Mostrar as próximas viagens com informações em cards cada viagem terá uma página própria
+-GALERIA: mostrar as viagens anteriores , cada viagem terá um conjunto de talvez 9 fotos, talvez descrição de roteiros anteriores também
+-SOBRE NÓS: Contar um pouco sobre a história da CFTUR , quando e como foi criada e um pouco sobre o senhor Carlos quem toca a empresa
+-CONTATO: Mostrar os meios de comunicação da empresa 
+-LOGIN: Teremos uma página de login para o Carlos cadastrar tanto novas viagens como novas galerias de fotos e alterar informações de viagens.
+-EXTRAS: Fazer com que a página realize compras? Fazer com que ela vire uma página maior como CVC e afins
+
+Footer:
+- Container-fluid com os links associados, ícones , talvez localização(iframe?).
