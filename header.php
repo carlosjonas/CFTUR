@@ -17,65 +17,84 @@
 	<link rel="stylesheet" type="text/css" href="public/css/style.css">
 
 	<!--BOOTSTRAP-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 <body>
 	<header>
-		<div class="container-fluid">
-			<div id="carrosel" class="carousel slide" data-ride="carousel">
-			  	<div class="carousel-inner">
-			    	<div class="carousel-item active">
-			      		<img class="d-block w-100" src="public/img/logo4.jpg" alt="Primeiro Slide">
-			      		<div class="carousel-caption d-none d-md-block">
-						    <h5>CFTUR...</h5>
-						</div>
-			   		</div>
-			    	<div class="carousel-item">
-			      		<img class="d-block w-100" src="public/img/logo4.jpg" alt="Segundo Slide">
-			      		<div class="carousel-caption d-none d-md-block">
-						    <h5>Levando seus sonhos...</h5>
-						</div>
-			    	</div>
-				    <div class="carousel-item">
-				      <img class="d-block w-100" src="public/img/logo4.jpg" alt="Terceiro Slide">
-				      <div class="carousel-caption d-none d-md-block">
-						    <h5>Sempre mais longe!</h5>
-						</div>
-				    </div>
-			  	</div>
-				<a class="carousel-control-prev" href="#carrosel" role="button" data-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="sr-only">Anterior</span>
-				</a>
-			  	<a class="carousel-control-next" href="#carrosel" role="button" data-slide="next">
-				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-				    <span class="sr-only">Próximo</span>
-			  	</a>
-			</div>
-
-			<!--funciona-->
-			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-			  <div class="carousel-inner">
-			    <div class="carousel-item active">
-			      <img class="d-block w-100" src="public/img/logo4.jpg" alt="Primeiro Slide">
-			    </div>
-			    <div class="carousel-item">
-			      <img class="d-block w-100" src="public/img/logo.jpg" alt="Segundo Slide">
-			    </div>
-			    <div class="carousel-item">
-			      <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Terceiro Slide" alt="Terceiro Slide">
-			    </div>
-			  </div>
+		<div class="row">
+			<div class="container-fluid">
+				<div id="carroselHeader" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carroselHeader" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					    <button type="button" data-bs-target="#carroselHeader" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					    <button type="button" data-bs-target="#carroselHeader" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+					    <div class="carousel-item active">
+					      <img src="public/img/logo.jpg" class="d-block" alt="...">
+					      <div class="carousel-caption d-none d-md-block">
+					        <h5>CFTUR...</h5>
+					      </div>
+					    </div>
+					<div class="carousel-item">
+					      <img src="public/img/logo.jpg" class="d-block" alt="...">
+					      <div class="carousel-caption d-none d-md-block">
+					        <h5>Levando seus sonhos...</h5>
+					      </div>
+					</div>
+					    <div class="carousel-item">
+					      <img src="public/img/logo.jpg" class="d-block" alt="...">
+					      <div class="carousel-caption d-none d-md-block">
+					        <h5>Sempre mais longe!</h5>
+					      </div>
+					    </div>
+					</div>
+					  <button class="carousel-control-prev" type="button" data-bs-target="#carroselHeader" data-bs-slide="prev">
+					    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					    <span class="visually-hidden">Previous</span>
+					  </button>
+					  <button class="carousel-control-next" type="button" data-bs-target="#carroselHeader" data-bs-slide="next">
+					    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					    <span class="visually-hidden">Next</span>
+					  </button>
+				</div>
 			</div>
 		</div>
-
-
+		<div class="row">
+			<div class="col">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<div class="container-fluid">
+						<a class="navbar-brand" href="#">Navbar</a>
+					    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					      <span class="navbar-toggler-icon"></span>
+					    </button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					    	<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						        <li class="nav-item">
+						          <a class="nav-link active" aria-current="page" href="#">Pacotes</a>
+						        </li>
+						        <li class="nav-item">
+						          <a class="nav-link" aria-current="page" href="#">Galeria</a>
+						        </li>
+						        <li class="nav-item">
+						          <a class="nav-link" aria-current="page" href="#">Sobre Nós</a>
+						        </li>
+						        <li class="nav-item">
+						          <a class="nav-link" aria-current="page" href="#">Contato</a>
+						        </li>
+					        </ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
 	</header>
 	<footer>
 		<!--SCRIPTS-->
 		<script type="text/javascript" src="script.js"></script>
+		<!--BOOTSTRAP-->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
 	</footer>
 </body>
 </html>
