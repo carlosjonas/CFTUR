@@ -2,6 +2,7 @@ CFTUR - Levando seus sonhos sempre mais longe
 
 O objetivo é começar um site da CFTUR  e mostrar mais dessa agência de viagens
 
+Viagem: Uma viagem deve conter id,título,data,descrição,valor,vagas,ativo, 
 Header:
 - Container fluid com 3 ou 4 imagens para que mostre 3 imagens 
 - header com a logo e os links em ordem: PACOTES/GALERIA/SOBRE NÓS/CONTATO
