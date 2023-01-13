@@ -1,7 +1,10 @@
 <?php
 
-public class Db{
-	
+namespace \App\Banco;
+
+class Db{
+
+	const HOST = ''
 }
 
 
