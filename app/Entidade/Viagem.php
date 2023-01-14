@@ -2,6 +2,8 @@
 
 namespace App\Entidade;
 
+use \App\Banco\Db;
+
 class Viagem{
 
 	/**
@@ -64,9 +66,20 @@ class Viagem{
 	 */
 	public function cadastrar(){
 		//Inserir a vaga no banco
-		
-		//Atribuir o id da vaga
+		$banco = new Db('viagens');
+		$this->id = $banco->insert([
+			'titulo' => $this->titulo,
+			'descricao' => $this->descricao,
+			'data_inicio' => $this->data_inicio,
+			'data_final' => $this->data_final,
+			'valor' => $this->valor,
+			'vagas' => $this->vagas,
+			'imagem' => $this->imagem,
+			'ativo' => $this->ativo,
+		]);
+
 		//Retornar sucesso
+		return true;
 	}
 }
 
