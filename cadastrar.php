@@ -19,7 +19,8 @@ if (isset($_POST['titulo'],$_POST['descricao'],$_POST['data_inicio'],$_POST['dat
 
     $viagem->cadastrar();
 
-    
+    header('location: home.php?status=success');
+    exit;
 }
 
 include  __DIR__.'\includes\header.php';
