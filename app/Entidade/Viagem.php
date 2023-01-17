@@ -3,6 +3,7 @@
 namespace App\Entidade;
 
 use \App\Banco\Db;
+use \PDO;
 
 class Viagem{
 
@@ -80,6 +81,17 @@ class Viagem{
 
 		//Retornar sucesso
 		return true;
+	}
+
+	/**
+	 * Método responsável por obeter as viagens no banco
+	 * @param string $where
+	 * @param string $order
+	 * @param string $limit
+	 * @return array
+	 */
+	public static function getViagens($where = null, $order = null, $limit = null){
+		return (new Db('viagens'))->select($where,$order,$limit)->fetchAll(PDO::FETCH_CLASS,self::class);
 	}
 }
 
