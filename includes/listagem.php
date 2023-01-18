@@ -3,21 +3,20 @@
 	$resultados = "";
 	foreach ($listaViagens as $viagem) {
 		$resultados .= '
-			<div class="card mt-3" style="width: 18rem;">
-			  <img src="' .$viagem->imagem.'" class="card-img-top" alt="' .$viagem->imagem.'">
+			<div class="card mt-3">
+			  <img src="' .$viagem->imagem. '" class="card-img-top" alt="' .$viagem->imagem. '">
 			  <div class="card-body">
-			    <h5 class="card-title">' .$viagem->titulo.'</h5>
+			    <h5 class="card-title">' .$viagem->titulo. '</h5>
 			    <p class="card-text">' .$viagem->descricao. '</p>
+			    <p class="card-text">Vagas: ' .$viagem->vagas. '</p>
+			    <p class="card-text">Valor: R$ ' .$viagem->valor. '</p>
+			    <p class="card-text"><small class="text-muted">De: ' .date('d/m/Y',strtotime($viagem->data_inicio)). ' Até: ' .date('d/m/Y',strtotime($viagem->data_final)). '</small></p>
 			  </div>
-			  <ul class="list-group list-group-flush">
-			    <li class="list-group-item">De: ' .date('d/m/Y',strtotime($viagem->data_inicio)). ' Até: '.date('d/m/Y',strtotime($viagem->data_final)). '</li>
-			    <li class="list-group-item">Vagas: ' .$viagem->vagas.'</li>
-			    <li class="list-group-item">Valor: ' .$viagem->valor. '</li>
-			    <li class="list-group-item">Status: ' .($viagem->ativo == '1' ? 'Ativo' : 'Inativo'). '</li>
-			  </ul>
 			  <div class="card-body">
-			    <a href="editar.php?id= ' .$viagem->id. '" class="card-link"><button type="button" class"btn btn-primary">Editar</button></a>
-			    <a href="editar.php?id= ' .$viagem->id. '" class="card-link"><button type="button" class"btn btn-danger">Excluir</button></a>
+			    <p class="card-text">
+			    	<a href="editar.php?id=' .$viagem->id. '"><button type="button" class="btn btn-primary">Editar</button></a> <a href="excluir.php?id=' .$viagem->id. '"><button type="button" class="btn btn-danger">Excluir</button></a>
+					
+				</p>
 			  </div>
 			</div>';
 	}
