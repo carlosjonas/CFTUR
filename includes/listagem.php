@@ -28,6 +28,5 @@
 
 		<section>
 			<?= $resultados; ?>
-
 		</section>
 	</main>
