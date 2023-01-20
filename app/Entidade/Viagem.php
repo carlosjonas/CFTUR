@@ -84,6 +84,23 @@ class Viagem{
 	}
 
 	/**
+	 * Método responsável por atualizar as viagens no banco
+	 * @return boolean
+	 */
+	public function atualizar(){
+		return (new Db('viagens'))->update('id = ' .$this->id,[
+				'titulo' => $this->titulo,
+				'descricao' => $this->descricao,
+				'data_inicio' => $this->data_inicio,
+				'data_final' => $this->data_final,
+				'valor' => $this->valor,
+				'vagas' => $this->vagas,
+				'imagem' => $this->imagem,
+				'ativo' => $this->ativo,
+			]);
+	}
+
+	/**
 	 * Método responsável por obeter as viagens no banco
 	 * @param string $where
 	 * @param string $order
@@ -92,6 +109,15 @@ class Viagem{
 	 */
 	public static function getViagens($where = null, $order = null, $limit = null){
 		return (new Db('viagens'))->select($where,$order,$limit)->fetchAll(PDO::FETCH_CLASS,self::class);
+	}
+
+	/**
+	 * Método responsável por buscar uma viagem no banco
+	 * @param integer $id
+	 * @return Vaga
+	 */
+	public static function getViagem($id){
+		return (new Db('viagens'))->select('id = ' .$id)->fetchObject(self::class);
 	}
 }
 

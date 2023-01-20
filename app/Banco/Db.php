@@ -117,7 +117,26 @@ class Db{
 		return $this->execute($query);
 
 	}
-}
 
+	/**
+	 * Método que atualiza dados no banco
+	 * @param string $where
+	 * @param array $values
+	 * @return boolean
+	 */
+	public function update($where, $values){
+		//DADOS DA QUERY
+		$fields = array_keys($values);
+		//MONTA A QUERY
+		$query = 'UPDATE ' .$this->table. ' SET ' .implode('=?,', $fields). '=? WHERE ' .$where;
+
+		//EXECUTA A QUERY
+		$this->execute($query,array_values($values));
+
+		//RETORNA SUCESSO
+		return true;
+
+	}
+}
 
 ?>
