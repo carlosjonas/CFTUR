@@ -101,6 +101,14 @@ class Viagem{
 	}
 
 	/**
+	 * Método responsável por excluir as viagens no banco
+	 * @return boolean
+	 */
+	public function excluir(){
+		return (new Db('viagens'))->delete('id = ' .$this->id);
+	}
+
+	/**
 	 * Método responsável por obeter as viagens no banco
 	 * @param string $where
 	 * @param string $order
