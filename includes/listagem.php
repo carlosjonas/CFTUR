@@ -1,6 +1,24 @@
 <?php 
+	
+	$mensagem = '';
+		if (isset($_GET['status'])) {
+			switch ($_GET['status']) {
+				case 'success':
+					$mensagem = '<div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+	  								<strong>Ação executada com sucesso!</strong>  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+								 </div>';
+					break;
+				
+				case 'error':
+					$mensagem = '<div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+	  								<strong>Ação não executada!</strong>  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+								 </div>';
+					break;
+			}
+		}
 
 	$resultados = "";
+
 	foreach ($listaViagens as $viagem) {
 		$resultados .= '
 			<div class="card mt-3">
@@ -22,6 +40,9 @@
  ?>
 
 	<main>
+
+		<?= $mensagem; ?>
+
 		<section>
 			<a class="btn btn-success mt-5" href="cadastrar.php">Nova Viagem</a>
 		</section>
