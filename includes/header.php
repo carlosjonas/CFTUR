@@ -1,3 +1,7 @@
+<?php 
+	// DEFINE O FUSO HORARIO COMO O HORARIO DE BRASILIA
+    date_default_timezone_set('America/Sao_Paulo'); 
+?>
 <!DOCTYPE html>
 <html>
 <head>
