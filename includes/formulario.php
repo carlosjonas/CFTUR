@@ -8,7 +8,7 @@
 		<form method="POST" class="mb-3">
 			<div class="form-group mt-3">
 				<label>Título</label>
-				<input type="text" class="form-control" name="titulo" 
+				<input type="text" class="form-control" name="titulo" placeholder="Título da viagem" 
 					<?php 
 						if (@$viagem != 'null') {
 							echo 'value="'.@$viagem->titulo.'"';			
@@ -20,19 +20,11 @@
 			</div>
 			<div class="form-group mt-3">
 				<label>Descrição</label>
-				<textarea class="form-control" name="descricao" rows="5"  required>
-					<?php 
-						if (@$viagem != 'null') {
-							echo @$viagem->descricao;			
-						}else{
-							echo 'null';
-						} 
-					?>
-				</textarea>
+				<textarea class="form-control" name="descricao" rows="5" placeholder="Descrição da viagem" required><?php if (@$viagem != 'null') { echo @$viagem->descricao; }else{ echo 'null'; } ?></textarea>
 			</div>
 			<div class="form-group mt-3">
 				<label>Data de Início</label>
-				<input type="date" class="form-control" name="data_inicio" 
+				<input type="date" class="form-control" name="data_inicio" onfocus="(this.type='date')" min="<?php $hoje = date('d/m/Y'); echo $hoje; ?>"
 					<?php 
 						if (@$viagem != 'null') {
 							echo 'value="'.@$viagem->data_inicio.'"';			
@@ -44,7 +36,7 @@
 			</div>
 			<div class="form-group mt-3">
 				<label>Data de Finalização</label>
-				<input type="date" class="form-control" name="data_final" 
+				<input type="date" class="form-control" name="data_final" min="<?php $hoje = date('d/m/Y'); echo $hoje; ?>"
 					<?php 
 						if (@$viagem != 'null') {
 							echo 'value="'.@$viagem->data_final.'"';			
@@ -56,7 +48,7 @@
 			</div>
 			<div class="form-group mt-3">
 				<label>Valor</label>
-				<input type="number" class="form-control" name="valor" 
+				<input type="number" class="form-control" name="valor" placeholder="R$ 0,00" 
 					<?php 
 						if (@$viagem != 'null') {
 							echo 'value="'.@$viagem->valor.'"';			
@@ -68,7 +60,7 @@
 			</div>
 			<div class="form-group mt-3">
 				<label>Número de vagas</label>
-				<input type="number" class="form-control" name="vagas" 
+				<input type="number" class="form-control" name="vagas" placeholder="N° de vagas" 
 					<?php 
 						if (@$viagem != 'null') {
 							echo 'value="'.@$viagem->vagas.'"';			
