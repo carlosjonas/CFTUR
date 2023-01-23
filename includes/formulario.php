@@ -24,7 +24,7 @@
 			</div>
 			<div class="form-group mt-3">
 				<label>Data de Início</label>
-				<input type="date" class="form-control" name="data_inicio" onfocus="(this.type='date')" min="<?php $hoje = date('d/m/Y'); echo $hoje; ?>"
+				<input type="date" class="form-control" name="data_inicio" min="<?php $hoje = date('d/m/Y'); echo $hoje; ?>" placeholder="__/__/__"
 					<?php 
 						if (@$viagem != 'null') {
 							echo 'value="'.@$viagem->data_inicio.'"';			
@@ -36,7 +36,7 @@
 			</div>
 			<div class="form-group mt-3">
 				<label>Data de Finalização</label>
-				<input type="date" class="form-control" name="data_final" min="<?php $hoje = date('d/m/Y'); echo $hoje; ?>"
+				<input type="date" class="form-control" name="data_final" min="<?php $hoje = date('d/m/Y'); echo $hoje; ?>" placeholder="__/__/__"
 					<?php 
 						if (@$viagem != 'null') {
 							echo 'value="'.@$viagem->data_final.'"';			
@@ -60,7 +60,7 @@
 			</div>
 			<div class="form-group mt-3">
 				<label>Número de vagas</label>
-				<input type="number" class="form-control" name="vagas" placeholder="N° de vagas" 
+				<input type="text" class="form-control vagas" id="vagas" name="vagas" placeholder="N° de vagas"
 					<?php 
 						if (@$viagem != 'null') {
 							echo 'value="'.@$viagem->vagas.'"';			
