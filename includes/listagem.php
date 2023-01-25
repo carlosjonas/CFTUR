@@ -22,7 +22,7 @@
 	foreach ($listaViagens as $viagem) {
 		$resultados .= '
 			<div class="card mt-3">
-			  <img src="' .$viagem->imagem. '" class="card-img-top" alt="' .$viagem->imagem. '">
+			  <img src="' .$viagem->imagem. '" class="card-img-top" alt="' .$viagem->nome_imagem. '">
 			  <div class="card-body">
 			    <h3 class="card-title text-center">' .$viagem->titulo. '</h3>
 			    <p class="card-text">' .$viagem->descricao. '</p>

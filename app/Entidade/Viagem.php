@@ -53,6 +53,24 @@ class Viagem{
 	 * Imagem da viagem
 	 * @var string
 	 */
+	public $nome_imagem;
+
+	/**
+	 * Imagem da viagem
+	 * @var string
+	 */
+	public $tamanho_imagem;
+
+	/**
+	 * Imagem da viagem
+	 * @var string
+	 */
+	public $tipo_imagem;
+
+	/**
+	 * Imagem da viagem
+	 * @var string
+	 */
 	public $imagem;
 
 	/**
@@ -75,6 +93,9 @@ class Viagem{
 			'data_final' => $this->data_final,
 			'valor' => $this->valor,
 			'vagas' => $this->vagas,
+			'nome_imagem' => $this->nome_imagem,
+			'tamanho_imagem' => $this->tamanho_imagem,
+			'tipo_imagem' => $this->tipo_imagem,
 			'imagem' => $this->imagem,
 			'ativo' => $this->ativo,
 		]);

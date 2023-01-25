@@ -7,7 +7,7 @@
 use \App\Entidade\Viagem;
 //echo "<pre>"; print_r($_POST); echo "</pre>"; exit;
 
-if (isset($_POST['titulo'],$_POST['descricao'],$_POST['data_inicio'],$_POST['data_final'],$_POST['valor'],$_POST['vagas'],$_POST['imagem'],$_POST['ativo'])) {
+if (isset($_POST['titulo'],$_POST['descricao'],$_POST['data_inicio'],$_POST['data_final'],$_POST['valor'],$_POST['vagas'],$_FILES['imagem'],$_POST['ativo'])) {
 
     $viagem = new Viagem();
     $viagem->titulo = $_POST['titulo'];
@@ -16,11 +16,26 @@ if (isset($_POST['titulo'],$_POST['descricao'],$_POST['data_inicio'],$_POST['dat
     $viagem->data_final = $_POST['data_final'];
     $viagem->valor = $_POST['valor'];
     $viagem->vagas = $_POST['vagas'];
-    $viagem->imagem = $_POST['imagem'];
+    $viagem->nome_imagem = $_FILES['imagem']['name'];
+    $viagem->tamanho_imagem = $_FILES['imagem']['size'];
+    $viagem->tipo_imagem = $_FILES['imagem']['type'];
+    $viagem->imagem = $_FILES['imagem']['tmp_name'];
+
+    //Verificação da imagem
+    if ( $viagem->imagem != "none" ){
+        $abrir_arquivo = fopen($viagem->imagem, "rb");
+        $conteudo = fread($abrir_arquivo, $viagem->tamanho_imagem);
+        $conteudo = addslashes($conteudo);
+        fclose($abrir_arquivo);
+
+        $viagem->imagem = $conteudo;
+    }
+
     $viagem->ativo = $_POST['ativo'];
 
     $viagem->cadastrar();
 
+    Header( "Content-type: image/gif");
     header('location: home.php?status=success');
     exit;
 }

@@ -5,7 +5,7 @@
 
 		<h2 class="mt-3"><?= TITLE; ?></h2>
 
-		<form method="POST" class="mb-3">
+		<form method="POST" class="mb-3" enctype="multipart/form-data">
 			<div class="form-group mt-3">
 				<label>Título</label>
 				<input type="text" class="form-control" name="titulo" placeholder="Título da viagem" 
