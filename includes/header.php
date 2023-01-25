@@ -36,22 +36,22 @@
 							<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						    	<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 							        <li class="nav-item">
-							          <a class="nav-link" aria-current="page" href="">Home</a>
+							          <a class="nav-link" aria-current="page" href="home.php">Home</a>
 							        </li>
 							        <li class="nav-item">
-							          <a class="nav-link" aria-current="page" href="#">Galeria</a>
+							          <a class="nav-link" aria-current="page" href="galeria.php">Galeria</a>
 							        </li>
 							        <li class="nav-item">
-							          <a class="nav-link" aria-current="page" href="#">Sobre Nós</a>
+							          <a class="nav-link" aria-current="page" href="sobre.php">Sobre Nós</a>
 							        </li>
 							        <li class="nav-item">
-							          <a class="nav-link" aria-current="page" href="#">Contato</a>
+							          <a class="nav-link" aria-current="page" href="contato.php">Contato</a>
 							        </li>
 							        <li class="nav-item">
-							          <a class="nav-link " aria-current="page" href="">Login</a>
+							          <a class="nav-link " aria-current="page" href="login.php">Login</a>
 							        </li>
 							        <li class="nav-item">
-							          <a class="nav-link " aria-current="page" href="">Cadastrar-se</a>
+							          <a class="nav-link " aria-current="page" href="cadastrar_usuario.php">Cadastrar-se</a>
 							        </li>
 						        </ul>
 							</div>
